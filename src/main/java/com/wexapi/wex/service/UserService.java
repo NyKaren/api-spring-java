@@ -3,9 +3,11 @@ package com.wexapi.wex.service;
 import com.wexapi.wex.model.User;
 import com.wexapi.wex.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class UserService {
 
     @Autowired
