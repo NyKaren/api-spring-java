@@ -36,13 +36,7 @@ public class UserController {
 
     //localhost:8081/api/user/
 
-    // ToDo search for address endpoints:
-    //@GetMapping
-    //@PostMapping
-    //@DeleteMapping
-    //@PutMapping
-    //@GetMapping("")
-    //@PostMapping("/add")
+    // ToDo search for:
 
     //Because of error:
 //    ResponseEntity
@@ -52,10 +46,10 @@ public class UserController {
 //    } catch (Exception e) {
 //        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
 //    }
-    //Beacuse of response:
+    //Because of response:
 //    @ResponseBody
 //    @PathVariable(value = "id") Long userId
-    // Get - Habilidade
+    // Get - Hability
 //    @GetMapping("/{id}")
 //    public @ResponseBody Habilidade getHabilidadeById(@PathVariable(value = "id") Long habilidadeId) {
 //        return habilidadeService.getHabilidadeById(habilidadeId);
