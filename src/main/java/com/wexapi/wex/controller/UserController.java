@@ -3,9 +3,7 @@ package com.wexapi.wex.controller;
 import com.wexapi.wex.model.User;
 import com.wexapi.wex.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -16,22 +14,27 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("")
+    @GetMapping("/")
     public List<User> getAll() {
         return userService.getAll();
     }
 
-    public User getUser(Long userId) {
+    @GetMapping("/{id}")
+    public User getUser(@PathVariable("id") Long userId) {
         return userService.getUser(userId);
     }
 
+    @PostMapping("/add")
     public void save(User user) {
         userService.save(user);
     }
 
-    public void delete(User user) {
-        userService.delete(user);
+    @DeleteMapping("/delete/{id}")
+    public void deleteById(@PathVariable("id") User user) {
+        userService.deleteById(user.getId());
     }
+
+    //localhost:8081/api/user/
 
     // ToDo search for address endpoints:
     //@GetMapping
